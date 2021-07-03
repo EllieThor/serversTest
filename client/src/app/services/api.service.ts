@@ -28,7 +28,7 @@ export class ApiService {
             }
           );
       } catch (err) {
-        console.log('ERRORRR : ', err);
+        console.log('ERROR : ', err);
         console.log(err);
       }
     });
@@ -47,7 +47,7 @@ export class ApiService {
           }
         );
       } catch (err) {
-        console.log('ERRORRR : ', err);
+        console.log('ERROR : ', err);
         console.log(err);
       }
     });
