@@ -19,13 +19,12 @@ app.use(bodyParser.json());
 
 app.use(cors(corsOptions));
 
-const Pets = require("./routes/petsRoute");
-app.use("/pets", Pets);
+const Servers = require("./routes/serverRoute");
+app.use("/servers", Servers);
 
-const Vaccines = require("./routes/vaccinesRoute");
-app.use("/vaccines", Vaccines);
+const Status = require("./routes/statusRoute");
+app.use("/status", Status);
 
-const Treatments = require("./routes/treatmentsRoute");
-app.use("/treatments", Treatments);
+
 
 app.listen(5004);

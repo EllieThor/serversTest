@@ -4,7 +4,7 @@ var con = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "pets",
+  database: "angular_server",
 });
 
 module.exports = con.promise();
