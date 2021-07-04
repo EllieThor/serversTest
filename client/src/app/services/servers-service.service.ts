@@ -15,4 +15,5 @@ export class ServersServiceService {
     )) as Array<Server>;
     console.log('Server: ', this._servers);
   }
+  async updateStatus(url: string) {}
 }
