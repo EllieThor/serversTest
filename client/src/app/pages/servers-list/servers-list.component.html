@@ -1,2 +1,8 @@
 <p>servers-list works!</p>
-<!-- <app-server-card></app-server-card> -->
+
+<!-- *ngFor="let server of serversService.servers" -->
+<div class="row">
+  <div class="col-3" *ngFor="let server of serversService._servers">
+    <app-server-card [server]="server"></app-server-card>
+  </div>
+</div>
