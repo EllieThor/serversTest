@@ -6,7 +6,7 @@ import { Server } from '../models/models';
 })
 export class FilteredServersPipe implements PipeTransform {
   transform(value: Array<Server>, str: string) {
-    console.log('F : ', str);
+    console.log('STR : ', str);
     // if (str == '') return value;
 
     // let arr = value.filter((user) => user.name.includes(str));

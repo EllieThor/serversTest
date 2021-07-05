@@ -8,6 +8,7 @@ import { ServersServiceService } from 'src/app/services/servers-service.service'
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  _searchInput: string = '';
   constructor(
     public serversService: ServersServiceService,
     public apiService: ApiService

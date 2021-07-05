@@ -18,6 +18,7 @@
             class="form-check-input"
             type="checkbox"
             id="flexSwitchCheckDefault"
+            [checked]="server.Status === 0 ? 'checked' : 'checked'"
           />
         </div>
       </div>
@@ -27,8 +28,8 @@
     class="card-body"
     [ngClass]="server.Status === 0 ? 'text-danger' : 'text-success'"
   >
-    <h5 class="card-title" *ngIf="server.Status === 0 ? 'Offline' : 'Online'">
-      {{ server.Status }}
+    <h5 class="card-title">
+      {{ server.Status === 0 ? "Offline" : "Online" }}
     </h5>
     <p class="card-text">Company Name: {{ server.CompanyName }}</p>
     <p class="card-text">IP: {{ server.IP }}</p>
@@ -40,3 +41,15 @@
 </div>
 <!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
 <!-- server.Status === 0 ?'':'checked' -->
+<!-- לשים משתנה של צקד -->
+<!-- *ngIf="server.Status != 0 ? 'checked'" -->
+<!-- [checked]="server.Status === 0 ? 'false' : 'true'" -->
+<input
+  type="checkbox"
+  [checked]="user.toggle === toggles[0].value"
+  (change)="
+    $event.target.checked
+      ? (user.toggle = toggles[0].value)
+      : (user.toggle = toggles[1].value)
+  "
+/>
