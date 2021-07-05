@@ -8,9 +8,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServersListComponent } from './pages/servers-list/servers-list.component';
 import { ServerCardComponent } from './pages/servers-list/server-card/server-card.component';
+import { FilteredServersPipe } from './pipes/filter-users.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ServersListComponent,ServerCardComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ServersListComponent,
+    ServerCardComponent,
+    FilteredServersPipe,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

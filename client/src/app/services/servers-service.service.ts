@@ -8,6 +8,7 @@ import { ApiService } from './api.service';
 export class ServersServiceService {
   _servers: Array<Server> = [];
   result: any = {};
+  _searchInput: string = 'abc';
   constructor(public apiService: ApiService) {}
 
   async getAllServers(url: string) {
