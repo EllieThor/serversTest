@@ -9,6 +9,12 @@
       <div class="col-6">
         <div class="form-check form-switch">
           <input
+            (click)="
+              serversService.updateStatus('/servers/status/updateStatus', {
+                ID: server.ID,
+                Status: server.Status
+              })
+            "
             class="form-check-input"
             type="checkbox"
             id="flexSwitchCheckDefault"
@@ -21,10 +27,9 @@
     class="card-body"
     [ngClass]="server.Status === 0 ? 'text-danger' : 'text-success'"
   >
-    <h5
-      class="card-title"
-      *ngIf="server.Status === 0 ? 'Offline' : 'Online'"
-    ></h5>
+    <h5 class="card-title" *ngIf="server.Status === 0 ? 'Offline' : 'Online'">
+      {{ server.Status }}
+    </h5>
     <p class="card-text">Company Name: {{ server.CompanyName }}</p>
     <p class="card-text">IP: {{ server.IP }}</p>
     <div>created At:</div>
@@ -34,3 +39,4 @@
   </div>
 </div>
 <!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
+<!-- server.Status === 0 ?'':'checked' -->

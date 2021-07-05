@@ -23,8 +23,6 @@ const Servers = require("./routes/serverRoute");
 app.use("/servers", Servers);
 
 const Status = require("./routes/statusRoute");
-app.use("/status", Status);
-
-
+app.use("/servers/status", Status);
 
 app.listen(5004);
