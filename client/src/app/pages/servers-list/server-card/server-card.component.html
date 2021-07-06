@@ -9,7 +9,7 @@
       <div class="col-6">
         <div class="form-check form-switch">
           <input
-            (click)="
+            (change)="
               serversService.updateStatus('/servers/status/updateStatus', {
                 ID: server.ID,
                 Status: server.Status
@@ -18,7 +18,7 @@
             class="form-check-input"
             type="checkbox"
             id="flexSwitchCheckDefault"
-            [checked]="server.Status === 0 ? 'checked' : 'checked'"
+            [checked]="server.Status === 0 ? '' : 'checked'"
           />
         </div>
       </div>
@@ -40,16 +40,3 @@
   </div>
 </div>
 <!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
-<!-- server.Status === 0 ?'':'checked' -->
-<!-- לשים משתנה של צקד -->
-<!-- *ngIf="server.Status != 0 ? 'checked'" -->
-<!-- [checked]="server.Status === 0 ? 'false' : 'true'" -->
-<!-- <input
-  type="checkbox"
-  [checked]="user.toggle === toggles[0].value"
-  (change)="
-    $event.target.checked
-      ? (user.toggle = toggles[0].value)
-      : (user.toggle = toggles[1].value)
-  "
-/> -->
