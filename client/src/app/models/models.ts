@@ -1,15 +1,25 @@
-export class Company {
-  ID: number = 0;
-  CompanyName: string = "";
-
-}
-
 export class Server {
   ID: number = 0;
-  ServerName: string = "";
-  CompanyName: string = "";
+  ServerName: string = '';
+  CompanyName: string = '';
   IP: number = 0;
   CompanyID: number = 0;
   Status: number = 0;
-  createdAt: string = "";
+  createdAt: string = '';
+
+  constructor(
+    ID?: number,
+    ServerName?: string,
+    CompanyName?: string,
+    IP?: number,
+    Status?: number,
+    createdAt?: string
+  ) {
+    this.ID = ID || 0;
+    this.ServerName = ServerName || '';
+    this.CompanyName = CompanyName || '';
+    this.IP = IP || 0;
+    this.Status = Status || 0;
+    this.createdAt = createdAt || '';
+  }
 }

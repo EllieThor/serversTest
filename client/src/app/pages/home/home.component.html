@@ -1,11 +1,12 @@
 <p>servers test</p>
 <div>
   <form class="d-flex">
-    <!-- <input
+    <input
       [(ngModel)]="serversService._searchInput"
       class="form-control me-2"
       placeholder="Search"
-    /> -->
+      [ngModelOptions]="{ standalone: true }"
+    />
   </form>
 </div>
 <hr />
