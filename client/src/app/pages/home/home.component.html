@@ -20,7 +20,12 @@
     <div class="col-6">
       <label for="onlineServer">
         show only online server
-        <input type="checkbox" name="onlineServer" id="onlineServer" />
+        <input
+          type="checkbox"
+          name="onlineServer"
+          id="onlineServer"
+          (change)="serversService.onlyOnline()"
+        />
       </label>
     </div>
   </div>
