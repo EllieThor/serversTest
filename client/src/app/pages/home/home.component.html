@@ -1,4 +1,3 @@
-<p>servers test</p>
 <div>
   <form class="d-flex">
     <input
@@ -10,4 +9,22 @@
   </form>
 </div>
 <hr />
-<app-servers-list></app-servers-list>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <label for="recentlyCreated">
+        sort by recentlyCreated
+        <input type="checkbox" name="recentlyCreated" id="recentlyCreated" />
+      </label>
+    </div>
+    <div class="col-6">
+      <label for="onlineServer">
+        show only online server
+        <input type="checkbox" name="onlineServer" id="onlineServer" />
+      </label>
+    </div>
+  </div>
+  <div class="row p-2">
+    <app-servers-list></app-servers-list>
+  </div>
+</div>
