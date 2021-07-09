@@ -1,14 +1,15 @@
 <div class="row p-5">
   <div
-    class="col-lg-3 col-md-6 col-12"
     *ngFor="
       let server of serversService._servers
         | filteredServers: serversService._searchInput
     "
+    [ngClass]="
+      serversService._onlyOnline == true && server.Status === 0
+        ? 'hidden'
+        : 'col-lg-3 col-md-6 col-12'
+    "
   >
-    <!-- <div [ngClass]="serversService._onlyOnline == true && server.Status === 1 ? '' : 'hidden'"> -->
-    <div [ngClass]="serversService._onlyOnline == true ? '' : 'hidden'">
-      <app-server-card [server]="server"></app-server-card>
-    </div>
+    <app-server-card [server]="server"></app-server-card>
   </div>
 </div>
