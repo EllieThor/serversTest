@@ -9,7 +9,7 @@ export class ServersServiceService {
   _servers: Array<Server> = [];
   result: any = {};
   _searchInput: string = '';
-  _onlyOnline: boolean = false;
+  _onlyOnline: boolean = true;
   constructor(public apiService: ApiService) {}
 
   async getAllServers(url: string) {

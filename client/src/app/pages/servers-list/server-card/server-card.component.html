@@ -1,4 +1,8 @@
-<div class="serversService._onlyOnline==true?'':'hidden'">
+<div
+  [ngClass]="
+    serversService._onlyOnline === true && server.Status === 0 ? '' : 'hidden'
+  "
+>
   <div
     class="card mb-3"
     style="max-width: 18rem"
@@ -40,5 +44,6 @@
       </p>
     </div>
   </div>
+  <!-- </div> -->
+  <!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
 </div>
-<!-- .slice(0, 9).replaceAll("-", "/").split("/").reverse().join("/") -->
